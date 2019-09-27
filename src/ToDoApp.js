@@ -15,7 +15,6 @@ export default function ToDoApp() {
         <AdderTask/>
         <FilterList/>
         <TaskList/>
-        <TaskItem/>
         <TaskItemEdit/>
         <Summary/>
         </div>

@@ -3,7 +3,7 @@ import {  Stack, Checkbox,IconButton } from 'office-ui-fabric-react';
 import { log } from 'util';
 
 
-export default function TaskItem() {
+export default function TaskItem({name,checked}) {
     const handleEdit = () => {
         console.log('edit');
         
@@ -18,9 +18,9 @@ export default function TaskItem() {
     return (
       <Stack horizontal horizontalAlign='space-between' verticalAlign='center'>
         <Checkbox 
-            label = 'tarea'
+            label={name}
             onChange={(e)=>{console.log(e.target.checked)}}
-            checked = {true}
+            checked={checked}
         />
         <Stack horizontal>
             <IconButton 
