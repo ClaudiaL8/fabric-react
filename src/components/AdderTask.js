@@ -48,6 +48,7 @@ export default function AdderTask() {
                 // iconProps={{ iconName: 'Add' }}
                 onClick={handleClick}
                 allowDisabledFocus
+                ariaLabel='Add task'
                 //disabled
                // checked
                 />
