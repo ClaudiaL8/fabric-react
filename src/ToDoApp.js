@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import AdderTask from './components/AdderTask';
 import TaskList from './components/TaskList';
+import { Stack } from 'office-ui-fabric-react';
 
 import { loadTheme } from 'office-ui-fabric-react';
 
@@ -33,11 +34,11 @@ loadTheme({
 });
 
 export default function ToDoApp() {
-    return (
-        <div className="App">
-        <h1>todos</h1>
-        <AdderTask/>
-        <TaskList/>
-        </div>
-    );
+  return (
+    <Stack horizontalAlign="center"className="App">
+      <h1>todos</h1>
+      <AdderTask />
+      <TaskList />
+    </Stack>
+  );
 }

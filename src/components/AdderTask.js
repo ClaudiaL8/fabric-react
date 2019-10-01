@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react';
-import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
-import { PrimaryButton, Stack } from 'office-ui-fabric-react';
+import { PrimaryButton, Stack, SearchBox } from 'office-ui-fabric-react';
 import { Context } from '../context/Context';
 
 export default function AdderTask() {

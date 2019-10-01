@@ -66,7 +66,7 @@ export default function FilterList() {
                     </ul>
                 </PivotItem>
             </Pivot>
-            <Stack horizontal verticalAlign='center' horizontalAlign='space-between'>
+            <Stack horizontal verticalAlign="center">
                 <p>{activesLength} items left</p>
                 <DefaultButton
                     text="Clear Completed"
