@@ -1,10 +1,9 @@
 import React, {useContext} from 'react';
 import { Context } from '../context/Context';
 import TaskItem from './TaskItem';
-import {  List } from 'office-ui-fabric-react';
 
 export default function TaskList() {
-    const {tasks,setTasks} = useContext(Context);
+    const { tasks, setTasks } = useContext(Context);
     return (
         <ul>
             {tasks.map(item => {
