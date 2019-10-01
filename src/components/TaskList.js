@@ -1,6 +1,4 @@
-import React, { useContext } from 'react';
-import { Context } from '../context/Context';
-import TaskItem from './TaskItem';
+import React from 'react';
 import FilterList from './FilterList';
 
 export default function TaskList() {

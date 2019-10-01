@@ -4,9 +4,9 @@ import { Context } from '../context/Context';
 import TaskItem from './TaskItem';
 
 export default function FilterList() {
-    const { tasks, setTasks } = useContext(Context);
-    let actives = tasks.filter(task => task.checked === true);
-    let complete = tasks.filter(task => task.checked === false);
+    const { tasks } = useContext(Context);
+    let complete = tasks.filter(task => task.checked === true);
+    let actives = tasks.filter(task => task.checked === false);
 
     return (
         <Pivot>
