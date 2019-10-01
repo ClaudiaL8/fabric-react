@@ -9,7 +9,6 @@ export default function TaskItem({ name, checked, id }) {
 
     const handleEdit = () => {
         setIsEditing(true)
-        console.log('edit');
     };
 
     const handleDelete = e => {
@@ -30,7 +29,7 @@ export default function TaskItem({ name, checked, id }) {
     return (
         <>
             {isEditing ? (
-                <TaskItemEdit name={name}/>
+                <TaskItemEdit name={name} id={id} setIsEditing={setIsEditing}/>
             ) : (
                     <Stack horizontal horizontalAlign='space-between' verticalAlign='center'>
                         <Checkbox
