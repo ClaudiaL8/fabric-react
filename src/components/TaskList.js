@@ -3,8 +3,6 @@ import FilterList from './FilterList';
 
 export default function TaskList() {
     return (
-        <ul>
-            <FilterList />
-        </ul>
+        <FilterList />
     );
 }

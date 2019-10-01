@@ -18,49 +18,55 @@ export default function FilterList() {
         <>
             <Pivot>
                 <PivotItem headerText="all">
-                    {tasks.map(item => {
-                        const { id, name, checked } = item;
-                        return (
-                            <li key={id}>
-                                <TaskItem
-                                    id={id}
-                                    name={name}
-                                    checked={checked}
-                                />
-                            </li>
-                        )
-                    })}
+                    <ul>
+                        {tasks.map(item => {
+                            const { id, name, checked } = item;
+                            return (
+                                <li className="list__item" key={id}>
+                                    <TaskItem
+                                        id={id}
+                                        name={name}
+                                        checked={checked}
+                                    />
+                                </li>
+                            )
+                        })}
+                    </ul>
                 </PivotItem>
                 <PivotItem headerText="active" >
-                    {actives.map(item => {
-                        const { id, name, checked } = item;
-                        return (
-                            <li key={id}>
-                                <TaskItem
-                                    id={id}
-                                    name={name}
-                                    checked={checked}
-                                />
-                            </li>
-                        )
-                    })}
+                    <ul>
+                        {actives.map(item => {
+                            const { id, name, checked } = item;
+                            return (
+                                <li className="list__item" key={id}>
+                                    <TaskItem
+                                        id={id}
+                                        name={name}
+                                        checked={checked}
+                                    />
+                                </li>
+                            )
+                        })}
+                    </ul>
                 </PivotItem>
                 <PivotItem headerText="completed">
-                    {complete.map(item => {
-                        const { id, name, checked } = item;
-                        return (
-                            <li key={id}>
-                                <TaskItem
-                                    id={id}
-                                    name={name}
-                                    checked={checked}
-                                />
-                            </li>
-                        )
-                    })}
+                    <ul>
+                        {complete.map(item => {
+                            const { id, name, checked } = item;
+                            return (
+                                <li className="list__item" key={id}>
+                                    <TaskItem
+                                        id={id}
+                                        name={name}
+                                        checked={checked}
+                                    />
+                                </li>
+                            )
+                        })}
+                    </ul>
                 </PivotItem>
             </Pivot>
-            <Stack horizontal verticalAlign='center' >
+            <Stack horizontal verticalAlign='center' horizontalAlign='space-between'>
                 <p>{activesLength} items left</p>
                 <DefaultButton
                     text="Clear Completed"
