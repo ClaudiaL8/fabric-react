@@ -10,7 +10,6 @@ export default function ToDoApp() {
         <div className="App">
         <h1>todos</h1>
         <AdderTask/>
-        <FilterList/>
         <TaskList/>
         <Summary/>
         </div>

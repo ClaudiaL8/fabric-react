@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, { useContext } from 'react';
 import { TextField, PrimaryButton, Stack } from 'office-ui-fabric-react';
 import { Context } from '../context/Context';
 
@@ -22,21 +22,18 @@ export default function TaskItemEdit({name, id, setIsEditing}) {
              <TextField
                 className="border-radius"
                 placeholder="Add Task"
-                // onFocus={() => console.log('onFocus called')}
-                // onBlur={() => console.log('onBlur called')}
                 onChange={handleChange}
                 value={name}
-                // onKeyPress={({ key }) => {
-                //     if (key === 'Enter') {
-                //         // handleClick();
-                //     }
-                // }}
+                onKeyPress={({ key }) => {
+                    if (key === 'Enter') {
+                        handleClick();
+                    }
+                }}
                 id={id}
             />
             <PrimaryButton
                 text="Save"
                 className="border-radius"
-                // iconProps={{ iconName: 'Add' }}
                 onClick={handleClick}
                 allowDisabledFocus
                 ariaLabel='Edit task'
